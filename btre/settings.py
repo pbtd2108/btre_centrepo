@@ -77,8 +77,6 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -143,14 +141,14 @@ MESSAGE_TAGS = {
 }
 
 # Email config
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'pbtd2108@gmail.com'
-# EMAIL_HOST_PASSWORD = 'rani1110'
-# EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'pbtd2108@gmail.com'
+EMAIL_HOST_PASSWORD = 'rani1110'
+EMAIL_USE_TLS = True
 
 
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
